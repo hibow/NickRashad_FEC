@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 3000;
+const cors = require('cors');
+const port = process.env.PORT || 3002;
 const { retrieveByBiz, retrieveByUser, retrieve1Review } = require('../db/dbReviews');
 const { saveUsers, retrieveUsersById } = require('../db/dbUsers');
-
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(`${__dirname}/../public`));
 
 app.get('/reviews/business/:bId', (req, res) => {
   let { bId } = req.params;
