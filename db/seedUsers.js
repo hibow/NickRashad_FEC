@@ -1,7 +1,7 @@
 let faker = require('faker');
 let axios = require('axios');
 let { saveUsers } = require('./dbUsers');
-// require('dotenv').config();
+require('dotenv').config();
 const seedUsers = () => {
   // return new Promise((resolve, reject) => {
   let config = { headers: { 'X-API-KEY': process.env.UI_FACES_API } };

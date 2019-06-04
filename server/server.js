@@ -1,14 +1,9 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-<<<<<<< HEAD
-=======
-const cors = require('cors');
->>>>>>> d641e627b31dac788f647627416b5e6634e5fc5c
 const port = process.env.PORT || 3002;
 const { retrieveByBiz, retrieveByUser, retrieve1Review } = require('../db/dbReviews');
 const { saveUsers, retrieveUsersById } = require('../db/dbUsers');
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static('public'));
 app.use(express.static(`${__dirname}/../public`));
