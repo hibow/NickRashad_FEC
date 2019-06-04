@@ -30,4 +30,4 @@ class ReviewsService extends Component {
   }
 }
 
-ReactDOM.render(<ReviewsService /> ,document.getElementById('app'));
+ReactDOM.render(<ReviewsService /> ,document.getElementById('ReviewsService'));
